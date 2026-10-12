@@ -1,0 +1,56 @@
+CLEAN TAKE — VIDEO 3 FOLLOW-ALONG PROMPTS
+
+These are cleaned-up, reusable versions of the prompts spoken or described in the final video, not a verbatim export of the Lovable conversation. Builds can differ between runs. The earlier staged preparation prompts are not the sequence filmed in this tutorial.
+
+1. INITIAL PROMPT — USE PLAN MODE
+
+Plan a focused AI video editor called Clean Take for short recordings. Users should be able to upload a recording, get a word-timed transcript, save editing preferences, receive AI cut suggestions, review suggestions, reverse cut decisions, and export an edited MP4.
+
+Use Lovable Cloud and built-in Lovable AI, except for transcription: use ElevenLabs for genuine word-level timestamps. Preserve false starts and repetitions in the transcript so the AI can identify them. Use browser-based video rendering rather than a separate rendering API. Never overwrite the original recording. Limit this tutorial app to two-minute clips and 100 MB uploads. Propose a plan before building.
+
+2. AFTER REVIEWING THE PLAN
+
+Build the approved plan. Keep this a focused short-video editor, not a complete professional editing suite.
+
+3. LAYOUT AND PLAYBACK FEEDBACK
+
+The transcript is causing the editor layout to overflow, especially with long sentences. Fix transcript wrapping so the video preview, transcript and cut controls remain usable.
+
+After accepting cuts, edited-preview playback sometimes stops after skipping one or two cuts. Fix it so playback continues through accepted cuts and reaches the end normally.
+
+Move the Export MP4 button into the header. We only need the export button there, not a separate explanatory export section. Preserve the existing recording, transcript and cut decisions.
+
+4. AGENT INTEGRATIONS
+
+Add agent integrations — an MCP server — to this app. Let an approved user's assistant list their clips, read the transcript, list suggested cuts and accept or reject a cut. Require sign-in and explicit approval, and restrict the assistant to that user's data. Do not grant broader tools just for the tutorial.
+
+The filmed workflow used Lovable's Agent Integrations control to start this step. The security sentences above make the viewer-facing version explicit; they are not a claim that these exact words were spoken on camera.
+
+5. VERIFY AFTER PUBLISHING
+
+I published the app. Can we now make sure that the AI agent setup works? Check the live MCP endpoint, sign-in and approval flow, and the available tools. Do not alter unrelated projects or reveal private recordings or credentials.
+
+6. CONNECT IN YOUR ASSISTANT
+
+Can you add this MCP server? Here are the details provided by my app:
+"[Paste your own app's Agent Integrations connection details here.]"
+
+Follow the supported connection flow in your assistant and approve the requested access only after reviewing it. The exact settings and labels can differ by client; do not assume the filmed Codex flow is identical in every ChatGPT or Claude client.
+
+7. CHECK A PROJECT
+
+What information do you have about project [YOUR PROJECT ID] in Clean Take?
+
+8. APPLY THE SUGGESTED CUTS
+
+For project [YOUR PROJECT ID], read its current suggested cuts and apply all of them. Do not change other projects.
+
+In the filmed fresh build, transcription and cut suggestions were initiated in the app first. The assistant then accepted those existing suggestions. Refresh the app if it does not automatically reflect the assistant's changes.
+
+SAFETY / COST NOTES
+
+- Use your own ElevenLabs key. Enable only Speech to Text, choose a small usage cap and a short expiration for the tutorial, and enter the key only in the secure connector/secret field. Never paste it into a public prompt, screenshot or source file.
+- Review suggested cuts; timestamps and AI suggestions do not remove the need to check the result.
+- Keep the original file. Browser export creates a new MP4 and needs the tab to remain open.
+- Lovable build credits, runtime Cloud/AI usage and ElevenLabs transcription are separate potential costs. This bundle makes no promise of a fixed free allowance or fixed build cost.
+- Before letting other users consume paid transcription or AI, add server-side ownership checks, upload limits and usage quotas. Publishing a URL alone is not a complete production security review.
