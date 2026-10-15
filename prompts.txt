@@ -6,7 +6,7 @@ These are cleaned-up, reusable versions of the prompts spoken or described in th
 
 Plan a focused AI video editor called Clean Take for short recordings. Users should be able to upload a recording, get a word-timed transcript, save editing preferences, receive AI cut suggestions, review suggestions, reverse cut decisions, and export an edited MP4.
 
-Use Lovable Cloud and built-in Lovable AI, except for transcription: use ElevenLabs for genuine word-level timestamps. Preserve false starts and repetitions in the transcript so the AI can identify them. Use browser-based video rendering rather than a separate rendering API. Never overwrite the original recording. Limit this tutorial app to two-minute clips and 100 MB uploads. Propose a plan before building.
+Use Lovable Cloud and built-in Lovable AI, except for transcription: use ElevenLabs for genuine word-level timestamps. Preserve false starts and repetitions in the transcript so the AI can identify them. Use browser-based video rendering rather than a separate rendering API. Never overwrite the original recording. Limit this tutorial app to two-minute clips and 100 MB uploads. Propose a plan before building. Keep transcription and AI credentials server-side. Require sign-in for stored clips and paid requests, and enforce clip ownership and deny-by-default database/storage access rules on the server. Enforce file-size, duration and supported-format limits server-side before processing, plus per-user quotas and rate limits before paid requests. Do not trust a client-supplied user ID or storage path as authorization. Avoid logging recordings, transcripts or credentials.
 
 2. AFTER REVIEWING THE PLAN
 
@@ -54,3 +54,7 @@ SAFETY / COST NOTES
 - Keep the original file. Browser export creates a new MP4 and needs the tab to remain open.
 - Lovable build credits, runtime Cloud/AI usage and ElevenLabs transcription are separate potential costs. This bundle makes no promise of a fixed free allowance or fixed build cost.
 - Before letting other users consume paid transcription or AI, add server-side ownership checks, upload limits and usage quotas. Publishing a URL alone is not a complete production security review.
+
+MAINTENANCE NOTE — 15 OCTOBER 2026
+
+These are educational prompts, not reviewed production app source. Inspect the app actually generated, test that another user's recordings/transcripts cannot be accessed through the UI, APIs, storage or MCP tools, and verify that signed-out users cannot trigger paid operations. Review deletion and retention controls before using private recordings. Keep dependencies and runtimes patched and test updates over time. Existing projects and copies do not receive these changes automatically. Read the repository's SECURITY.md before deployment.

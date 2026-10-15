@@ -1,3 +1,9 @@
+> **Educational code and security — updated 15 October 2026**
+>
+> These examples teach selected concepts and may omit controls required for production. Dependencies and runtimes become outdated over time. Before running or reusing an example, read [SECURITY.md](SECURITY.md), check current advisories, keep dependencies on supported patched versions, and test upgrades. Do not expose development servers or use real customer data or production credentials in a tutorial environment.
+>
+> Except as separately agreed or required by applicable law, the examples are provided as-is, without warranties. To the maximum extent permitted by applicable law, ByteGrad Sp. z o.o. and the authors disclaim liability for losses arising from use of these examples. Nothing limits mandatory consumer rights or liability that cannot lawfully be excluded. This notice does not change your course purchase agreement or grant rights to third-party assets.
+
 # Lovable AI Video Editor Tutorial
 
 Follow-along resources for ByteGrad's tutorial on building a short-video editor in Lovable and connecting an AI assistant through MCP.
@@ -36,3 +42,9 @@ The ZIP contains `prompts.txt`, `morning-routine.mp4` and a short `README.txt`.
 
 This focused tutorial app is for short clips, not a replacement for a professional editing suite.
 
+
+## Keeping your generated app maintained
+
+These materials do not include a dependency lockfile or the generated app source. A security review of this repository does not establish that an app generated from the prompts is secure. Review the actual generated source, dependencies, backend access rules and deployed configuration before using real recordings or accepting other users.
+
+Keep your own app on supported, patched dependencies and runtimes, run its dependency/security checks regularly, and test updates. Changes here do not automatically update an existing Lovable project, fork or downloaded ZIP. See [SECURITY.md](SECURITY.md) for practical checks and private reporting. The 15 October 2026 review strengthened the prompts and synchronized the downloadable ZIP; it did not audit or deploy a generated app.
